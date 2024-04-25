@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopLevelManagement", "TopLe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{770530BB-1B03-4C7E-9F75-98BC89E2CC78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Test", "EmployeeManagement.Test\EmployeeManagement.Test.csproj", "{AC564174-A603-46DD-B255-F46CEDD788DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{770530BB-1B03-4C7E-9F75-98BC89E2CC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{770530BB-1B03-4C7E-9F75-98BC89E2CC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{770530BB-1B03-4C7E-9F75-98BC89E2CC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC564174-A603-46DD-B255-F46CEDD788DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC564174-A603-46DD-B255-F46CEDD788DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC564174-A603-46DD-B255-F46CEDD788DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC564174-A603-46DD-B255-F46CEDD788DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
