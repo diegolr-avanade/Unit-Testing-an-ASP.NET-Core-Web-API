@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using EmployeeManagement.Business;
-using EmployeeManagement.Models;
-using Microsoft.AspNetCore.Http;
+using EmployeeManagement.Models; 
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.Controllers
@@ -26,20 +25,20 @@ namespace EmployeeManagement.Controllers
             var internalEmployees = await _employeeService.FetchInternalEmployeesAsync();
 
             // with manual mapping
-            var internalEmployeeDtos =
-                internalEmployees.Select(e => new InternalEmployeeDto()
-                {
-                    Id = e.Id,
-                    FirstName = e.FirstName,
-                    LastName = e.LastName,
-                    Salary = e.Salary,
-                    SuggestedBonus = e.SuggestedBonus,
-                    YearsInService = e.YearsInService
-                });
+            //var internalEmployeeDtos =
+            //    internalEmployees.Select(e => new InternalEmployeeDto()
+            //    {
+            //        Id = e.Id,
+            //        FirstName = e.FirstName,
+            //        LastName = e.LastName,
+            //        Salary = e.Salary,
+            //        SuggestedBonus = e.SuggestedBonus,
+            //        YearsInService = e.YearsInService
+            //    });
 
             // with AutoMapper
-            //var internalEmployeeDtos =
-            //    _mapper.Map<IEnumerable<InternalEmployeeDto>>(internalEmployees);
+            var internalEmployeeDtos =
+                _mapper.Map<IEnumerable<InternalEmployeeDto>>(internalEmployees);
 
             return Ok(internalEmployeeDtos);
         }

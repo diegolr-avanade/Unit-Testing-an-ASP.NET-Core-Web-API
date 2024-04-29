@@ -18,7 +18,8 @@ namespace EmployeeManagement.Controllers
         [HttpGet] 
         public ActionResult<StatisticsDto> GetStatistics()
         {
-            var httpConnectionFeature = HttpContext.Features.Get<IHttpConnectionFeature>();
+            var httpConnectionFeature = HttpContext.Features
+                .Get<IHttpConnectionFeature>();
             return Ok(_mapper.Map<StatisticsDto>(httpConnectionFeature));
         }
     }
