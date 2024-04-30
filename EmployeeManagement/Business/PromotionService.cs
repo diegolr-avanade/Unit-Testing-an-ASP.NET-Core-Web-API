@@ -23,7 +23,8 @@ namespace EmployeeManagement.Business
         /// </summary>
         /// <param name="employee"></param>
         /// <returns></returns>
-        public async Task<bool> PromoteInternalEmployeeAsync(InternalEmployee employee)
+        public async Task<bool> PromoteInternalEmployeeAsync(
+            InternalEmployee employee)
         {
             if (await CheckIfInternalEmployeeIsEligibleForPromotion(employee.Id))
             {
@@ -55,7 +56,8 @@ namespace EmployeeManagement.Business
 
             // deserialize content
             var content = await response.Content.ReadAsStringAsync();
-            var promotionEligibility = JsonSerializer.Deserialize<PromotionEligibility>(content,
+            var promotionEligibility = JsonSerializer
+                .Deserialize<PromotionEligibility>(content,
                 new JsonSerializerOptions
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase
